@@ -19,6 +19,12 @@ public class lab1_1 {
         }
     }
 
+    public static int countNegativeArrayList(ArrayList<Integer> list) {
+        int count = 0;
+        for (int v : list) if (v < 0) count++;
+        return count;
+    }
+
     // ===== Методы для LinkedList =====
     public static void printLinkedList(LinkedList<Integer> list) {
         System.out.print("LinkedList: [ ");
@@ -33,6 +39,12 @@ public class lab1_1 {
         }
     }
 
+    public static int countNegativeLinkedList(LinkedList<Integer> list) {
+        int count = 0;
+        for (int v : list) if (v < 0) count++;
+        return count;
+    }
+
     public static void main(String[] args) {
         System.out.println("=== Часть 2: ArrayList ===");
         ArrayList<Integer> arrayList = new ArrayList<>();
@@ -41,6 +53,7 @@ public class lab1_1 {
         arrayList.add(0);
         arrayList.add(7);
         System.out.print("Исходный:  "); printArrayList(arrayList);
+        System.out.println("Отрицательных: " + countNegativeArrayList(arrayList));
         transformArrayList(arrayList);
         System.out.print("После 0/1: "); printArrayList(arrayList);
 
@@ -51,6 +64,7 @@ public class lab1_1 {
         linkedList.add(0);
         linkedList.add(7);
         System.out.print("Исходный:  "); printLinkedList(linkedList);
+        System.out.println("Отрицательных: " + countNegativeLinkedList(linkedList));
         transformLinkedList(linkedList);
         System.out.print("После 0/1: "); printLinkedList(linkedList);
     }

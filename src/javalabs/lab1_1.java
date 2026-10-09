@@ -1,26 +1,39 @@
 package javalabs;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class lab1_1 {
+
+    // ===== Методы для ArrayList =====
+    public static void printArrayList(ArrayList<Integer> list) {
+        System.out.print("ArrayList:  [ ");
+        for (int v : list) System.out.print(v + " ");
+        System.out.println("]");
+    }
+
+    // ===== Методы для LinkedList =====
+    public static void printLinkedList(LinkedList<Integer> list) {
+        System.out.print("LinkedList: [ ");
+        for (int v : list) System.out.print(v + " ");
+        System.out.println("]");
+    }
+
     public static void main(String[] args) {
-        // ===== ЧАСТЬ 1: Обычные массивы (сокращенно) =====
-        System.out.println("=== Часть 1: Обычные массивы ===");
-        int[] arr1 = {5, -3, 0, 7};
-        System.out.print("Массив 1: [ ");
-        for (int v : arr1) System.out.print(v + " ");
-        System.out.println("]");
+        System.out.println("=== Часть 2: ArrayList ===");
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.add(5);
+        arrayList.add(-3);
+        arrayList.add(0);
+        arrayList.add(7);
+        printArrayList(arrayList);
 
-        // ===== ЧАСТЬ 2: ArrayList =====
-        System.out.println("\n=== Часть 2: ArrayList ===");
-        ArrayList<Integer> list1 = new ArrayList<>();
-        list1.add(5);
-        list1.add(-3);
-        list1.add(0);
-        list1.add(7);
-
-        System.out.print("ArrayList 1: [ ");
-        for (int v : list1) System.out.print(v + " ");
-        System.out.println("]");
+        System.out.println("\n=== Часть 3: LinkedList ===");
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(5);
+        linkedList.add(-3);
+        linkedList.add(0);
+        linkedList.add(7);
+        printLinkedList(linkedList);
     }
 }
